@@ -1064,28 +1064,7 @@ def transformer_iwslt_1layers(args):
 @register_model_architecture("transformer", "transformer_wmt_en_de")
 def transformer_wmt_en_de(args):
     base_architecture(args)
-
-
-@register_model_architecture("transformer", "transformer_baseline_6encoder")
-def transformer_baseline_6encoder(args):
-    args.position_encoder_layers = getattr(args, "position_encoder_layers", 0)
-    args.encoder_layers = getattr(args, "encoder_layers", 6)
-    base_architecture(args)
-
-
-@register_model_architecture("transformer", "transformer_baseline_8encoder")
-def transformer_baseline_8encoder(args):
-    args.position_encoder_layers = getattr(args, "position_encoder_layers", 0)
-    args.encoder_layers = getattr(args, "encoder_layers", 8)
-    base_architecture(args)
-
-
-@register_model_architecture("transformer", "transformer_baseline_10encoder")
-def transformer_baseline_10encoder(args):
-    args.position_encoder_layers = getattr(args, "position_encoder_layers", 0)
-    args.encoder_layers = getattr(args, "encoder_layers", 10)
-    base_architecture(args)
-
+    
 
 @register_model_architecture("transformer", "reordering_transformer_2_encoder_2_decoder")
 def reordering_transformer_2_encoder_2_decoder(args):
